@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="text-4xl font-bold mb-4 text-center">Aqua Manage</header>
+        <Header />
         {children}
-        <footer className="text-4xl font-bold mb-4 text-center">&copy; 2025 Aqua Manage</footer>
+        <footer className="text-4xl font-bold mb-4 mt-6 text-center">&copy; 2025 Aqua Manage</footer>
       </body>
     </html>
   );
